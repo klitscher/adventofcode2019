@@ -14,5 +14,13 @@ def findfuelreqs():
     for i in range(len(li)):
         li[i] = int(li[i]/3) - 2
 
-    print(sum(li))
-        
+    modulemass = sum(li)
+    fuelmass = []
+    for i in range(len(li)):
+        num = li[i]
+        while num > 0:
+            num = int(num/3) - 2
+            if num > 0:
+                fuelmass.append(num)
+    
+    print(modulemass + sum(fuelmass))
